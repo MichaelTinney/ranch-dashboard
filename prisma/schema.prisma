@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Matriz {
+  id          Int      @id @default(autoincrement())
+  brinco      String
+  ferro       String?
+  raca        String?
+  nascimento  String?
+  situacao    String?
+  ano2021     String?
+  ano2022     String?
+  ano2023     String?
+  ano2024     String?
+  sex         String?
+  rac         String?
+  obs         String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
